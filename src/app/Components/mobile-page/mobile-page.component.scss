@@ -1,0 +1,126 @@
+// tabs-sass--
+
+::ng-deep mat-tab-header {
+    width: fit-content !important;
+    margin: 0 auto !important;
+    border: none !important;
+
+    .mat-tab-list {}
+
+    .mat-tab-labels {
+        display: flex;
+        height: 100px;
+        align-items: center;
+    }
+
+    .mat-ink-bar {
+        display: none !important;
+    }
+
+    .mat-tab-label-active {
+        background: #F21863 !important;
+        border-radius: 10.95px !important;
+        color: #fff !important;
+    }
+
+    .mat-tab-label {
+        padding: 10px 20px;
+        background: #FFFFFF;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10.95px;
+        margin: 10px;
+        color: #F21863;
+    }
+}
+
+// ---
+
+
+
+
+.mobile-tabs-section {
+    padding: 100px 0;
+
+    mat-tab-group {}
+}
+
+::ng-deep mat-tab-body {
+
+    .mat-tab-body-content {
+        overflow: initial !important;
+    }
+
+    .mobile-tabs-summry {
+
+        .mobile-tabs-summry-block {
+
+            padding: 60px 0 20px;
+
+            img {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            h2 {
+                margin-bottom: 50px !important;
+
+                span {
+                    display: block;
+                }
+
+                &:after {
+                    left: 18%;
+                }
+
+                &::before {
+                    left: 10%;
+                }
+            }
+        }
+    }
+}
+
+
+$breakpoint-ipad-pro: 1024px;
+
+@media (max-width: $breakpoint-ipad-pro) {
+    .mobile-tabs-section {
+        padding: 50px 0;
+
+        .row {
+
+            .col-sm-12 {
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+}
+
+$breakpoint-ipad: 768px;
+
+@media (max-width: $breakpoint-ipad) {
+    .mobile-tabs-section {
+        padding: 100px 0 50px;
+
+        .row {
+            flex-direction: column;
+
+            .col-sm-12 {
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 80px;
+                }
+            }
+        }
+    }
+
+}

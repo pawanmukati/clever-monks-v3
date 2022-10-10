@@ -1,0 +1,365 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$clever-monks-latest-primary: mat.define-palette(mat.$indigo-palette);
+$clever-monks-latest-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$clever-monks-latest-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$clever-monks-latest-theme: mat.define-light-theme((color: (primary: $clever-monks-latest-primary,
+        accent: $clever-monks-latest-accent,
+        warn: $clever-monks-latest-warn,
+      )));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($clever-monks-latest-theme);
+
+/* You can add global styles to this file, and also import other style files */
+// @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// fonts--
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Black.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Bold.woff') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraLight.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Light.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'),
+    url('/assets/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// swiper-scss--
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+
+body {
+  font-family: 'Montserrat' !important;
+  background-color: #fff;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 1270px !important;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #7e7e7e;
+  font-weight: 400;
+  text-align: left;
+}
+
+h1 {
+  font-size: 55.4px !important;
+  color: #000072;
+  font-weight: 800 !important;
+  line-height: 60.78px !important;
+
+  span {
+    color: #f21763;
+  }
+}
+
+h2,
+h3 {
+  font-size: 50.4px !important;
+  color: #000072;
+  font-weight: 800 !important;
+  line-height: 57.78px !important;
+  position: relative;
+  width: fit-content;
+  margin-bottom: 60px !important;
+
+  span {
+    color: #f21763;
+  }
+
+  &:after {
+    content: "";
+    width: 5%;
+    height: 6px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #F3245C, #FD8926);
+    position: absolute;
+    left: 58%;
+    transform: translate(-55%, 0px);
+    bottom: -10px;
+    transition: 0.3s ease all;
+  }
+
+  &::before {
+    content: "";
+    width: 15%;
+    height: 6px;
+    border-radius: 50px;
+    background: linear-gradient(to right, #F3245C, #FD8926);
+    position: absolute;
+    left: 50%;
+    transform: translate(-70%, 0px);
+    bottom: -10px;
+    transition: 0.3s ease all;
+  }
+}
+
+// primary-btn
+
+.button-wrapper {
+  position: relative;
+  width: fit-content;
+  .button {
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 30px;
+    background-color: #fff;
+    color: #f21763;
+    border-radius: 50px;
+    border: 0px;
+    cursor: pointer;
+  }
+  &:hover .button-bg {
+    filter: blur(10px);
+    transition: filter .4s ease-in;
+  }
+}
+.button-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, #FF8038 0%, #FF0099 30.43%, #FF8038 68.23%, #FF0099 100%);
+  background-size: 600% 600%;
+  border-radius: 50px;
+  animation: AnimateBorder 4s ease infinite;
+  -webkit-animation: AnimateBorder 4s ease infinite;
+  -moz-animation: AnimateBorder 4s ease infinite;
+  z-index: -1;
+  transform: translate(-2px, -2px);
+  transition: filter 1s ease-in;
+}
+
+@-webkit-keyframes AnimateBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimateBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimateBorder {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+// --
+
+
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+}
+
+// swiper-arrows-
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  &:after {
+    content: 'prev';
+    color: #f21763;
+    font-size: 30px;
+  }
+
+  left: 40px;
+  right: auto;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  &:after {
+    content: "next";
+    color: #f21763;
+    font-size: 30px;
+  }
+
+  right: 40px;
+  left: auto;
+
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #f21763;
+}
+
+div.swiper-wrapper {
+  align-items: center;
+}
+
+$breakpoint-ipad-pro: 1024px;
+
+@media (max-width: $breakpoint-ipad-pro) {}
+
+$breakpoint-ipad: 768px;
+
+@media (max-width: $breakpoint-ipad) {}
+
+$breakpoint-mobile: 767px;
+
+@media (max-width: $breakpoint-mobile) {
+  mat-tab-header .mat-tab-labels {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  h2 {
+    &::before {
+      left: 10%;
+
+    }
+
+    &::after {
+      left: 18%;
+
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: 0px;
+    left: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: 0px;
+    right: auto;
+  }
+
+
+}
+
+
+.scrollmagic-pin-spacer {
+  // height: auto !important;
+  padding-top: 0 !important;
+}

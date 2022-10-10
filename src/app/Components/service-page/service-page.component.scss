@@ -1,0 +1,416 @@
+.service-tabs-section {
+    padding: 100px 0 0;
+
+    mat-tab-group {
+
+        mat-tab {}
+    }
+}
+
+::ng-deep mat-tab-header {
+    width: fit-content !important;
+    margin: 0 auto !important;
+    border: none !important;
+
+    .mat-tab-labels {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .mat-ink-bar {
+        display: none !important;
+    }
+
+    .mat-tab-label-active {
+        background: #F21863 !important;
+        border-radius: 10.95px !important;
+        color: #fff !important;
+    }
+
+    .mat-tab-label {
+        padding: 10px 20px;
+        background: #FFFFFF;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10.95px;
+        margin: 10px;
+        color: #F21863;
+    }
+}
+
+::ng-deep mat-tab-body {
+    padding: 50px 0 0;
+
+    // Custom Development---
+
+    .mat-tab-body-content {
+        overflow: initial !important;
+    }
+
+    .custom-development {
+        p.header-parargraph {
+            color: #000;
+            font-size: 18px;
+            font-weight: 600;
+            font-family: "Montserrat";
+            text-align: center;
+        }
+
+        .custom-development-block {
+            padding: 60px 0;
+
+            img {
+                width: 100%;
+                max-width: 450px;
+            }
+
+            h2 {
+                margin-bottom: 50px !important;
+
+                span {
+                    display: block;
+                }
+
+                &:after {
+                    left: 18%;
+                }
+
+                &::before {
+                    left: 10%;
+                }
+            }
+        }
+
+        .cms-development {
+            padding: 50px 0;
+
+            h2 {
+                font-size: 30px !important;
+                font-weight: 700 !important;
+                line-height: 35px !important;
+                width: 470px;
+                max-width: 470px;
+                margin-bottom: 50px !important;
+
+                span {}
+
+                &::before {
+                    left: 11%;
+                }
+
+                &::after {
+                    left: 19%;
+                }
+            }
+
+            ul {
+                padding-left: 1rem;
+
+                li {}
+            }
+
+            img {
+                width: 100%;
+                max-width: 450px;
+                margin-left: auto;
+                display: block;
+            }
+        }
+    }
+
+    // Open Source Implimentation-,Maintanance and Support-
+
+    .open-source-implimentation,
+    .maintanance-and-support {
+        .col-md-6 {
+            p {
+                font-size: 16px;
+                line-height: 26px;
+                color: #7e7e7e;
+                font-family: "Montserrat";
+                font-weight: 500;
+                text-align: left;
+            }
+        }
+
+        img {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 {
+            span {}
+
+            &::after {
+                left: 19%;
+            }
+
+            &::before {
+                left: 11%;
+            }
+        }
+
+        p {
+            margin-top: 80px;
+            text-align: center;
+            color: #000072;
+            line-height: 26px;
+            font-size: 18px;
+            font-weight: 700;
+
+            span {
+                color: #F21863;
+            }
+        }
+
+        ul {
+            margin-top: 50px !important;
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            li {
+                border: 2px solid #000072;
+                margin: 10px;
+                padding: 15px;
+                width: 100%;
+                max-width: 29.33%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                transition: 0.5s ease all;
+
+                span {
+                    font-weight: 700;
+                    font-size: 15px;
+                    line-height: 18px;
+                    transition: 0.5s ease all;
+                }
+
+                &:hover {
+                    border-color: #F21863;
+
+                    span {
+                        color: #F21863;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .maintanance-and-support {
+        ul {
+            width: 100%;
+            max-width: 100%;
+            padding: 50px 0;
+
+            li {
+                width: 100%;
+                max-width: 18%;
+            }
+        }
+    }
+}
+
+// our-expertise-
+.our-expertise {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+        list-style: none;
+
+        li {
+            margin: 10px;
+            width: 100%;
+            max-width: 23%;
+            margin-bottom: 50px;
+
+            .our-expertise-card {
+                background: #FFFFFF;
+                box-shadow: 0px 8.02153px 19.6892px 5.10461px rgba(0, 0, 0, 0.04);
+                border-radius: 29.1692px;
+                padding: 20px 15px;
+                height: 100%;
+                transition: all 300ms linear;
+
+                img {
+                    width: auto;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                }
+
+                span {
+                    display: block;
+                    margin: 20px 0;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20.4184px;
+                    line-height: 25px;
+                    text-align: center;
+                    color: #000072;
+
+                }
+
+                p {
+                    text-align: center;
+                    margin: 0;
+                }
+
+                &:hover {
+                    box-shadow: 0px 20px 15px rgb(51 68 85 / 40%);
+                    transform: translate(0px, -20px);
+                }
+            }
+
+        }
+    }
+}
+
+$breakpoint-ipad-pro: 1024px;
+
+@media (max-width: $breakpoint-ipad-pro) {}
+
+$breakpoint-ipad: 768px;
+
+@media (max-width: $breakpoint-ipad) {
+    .custom-development {
+        .custom-development-block {
+            .row {
+                flex-direction: column;
+
+                .col-md-6 {
+                    width: 100%;
+                    max-width: 100%;
+
+                    img {
+                        margin: 0 auto;
+                        display: block;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .cms-development {
+        .row {
+            flex-direction: column-reverse;
+
+            .col-md-6 {
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .maintanance-and-support {
+        ul {
+            margin-top: 0 !important;
+        }
+
+        .row {
+            flex-direction: column;
+
+            .col-md-6 {
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 50px;
+                }
+            }
+
+            h2 {
+                max-width: 550px;
+            }
+        }
+    }
+
+    .open-source-implimentation {
+        .row {
+            flex-direction: column;
+
+            .col-md-6 {
+                width: 100%;
+                max-width: 100%;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 50px;
+                }
+
+            }
+
+            h2 {
+                margin-bottom: 0 !important;
+            }
+
+            p {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .custom-development .cms-development {
+        padding: 0px 0;
+    }
+
+    .service-tabs-section {
+        .mat-tab-body {
+            padding: 50px 0 0;
+        }
+    }
+
+    .open-source-implimentation p,
+    .maintanance-and-support p {
+        margin-top: 50px;
+    }
+}
+
+$breakpoint-mobile: 767px;
+
+@media (max-width: $breakpoint-mobile) {
+    .maintanance-and-support {
+        ul {
+            li {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .our-expertise {
+        ul {
+            li {
+                max-width: 100%;
+            }
+        }
+    }
+    .mat-tab-labels {
+        display: flex;
+        height: 150px !important;
+        align-items: center;
+        width: 280px;
+    }
+}

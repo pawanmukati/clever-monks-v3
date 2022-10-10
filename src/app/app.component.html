@@ -1,0 +1,201 @@
+<header>
+  <div class="top-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- desktop -->
+          <div class="contact-detail">
+            <div class="email contact-detail-icon">
+              <a href="mailto:pawan.mukati@newtechfuison.com" class="active">
+                <div class="icon">
+                  <img class="white-border-icon" src="../assets/images/white-border-message.svg" alt="">
+                  <img class="white-orange-icon" src="../assets/images/orange-message-icon.svg" alt="">
+                </div>
+                <p>clever@monk.com</p>
+              </a>
+            </div>
+            <div class="tel-phone contact-detail-icon">
+              <div class="icon">
+                <!-- <img class="white-border-icon" src="../assets/images/white-border-call-icon.svg" alt=""> -->
+                <img class="orange-icon" src="../assets/images/orange-call-icon.svg" alt="">
+              </div>
+              <p>+91 7314050926</p>
+            </div>
+          </div>
+
+          <!-- mob-view -->
+          <div class="mob-contact-detail">
+            <div class="mob-icon-contact-details">
+              <img class="white-border-icon" src="../assets/images/white-border-message.svg" alt="">
+              <p>clever@monk.com</p>
+            </div>
+            <div class="mob-icon-contact-details">
+              <img class="white-border-icon" src="../assets/images/white-border-call-icon.svg" alt="">
+              <p>+91 7314050926</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <!-- desktop -->
+          <div class="social-icon">
+            <a href="https://www.twitter.com/newtechfusion/" target="_blank">
+              <img src="/assets/images/twitter.svg" alt="">
+              <img src="/assets/images/white-twitter-icon.svg" alt="" class="onhover">
+            </a>
+            <a href="https://www.instagram.com/newtechfusion/" target="_blank">
+              <img src="/assets/images/insta.svg" alt="">
+              <img src="/assets/images/white-insta-icon.svg" alt="" class="onhover">
+            </a>
+            <a href="https://www.facebook.com/newtechfusion" target="_blank">
+              <img src="/assets/images/fb.svg" alt="">
+              <img src="/assets/images/white-fb-icon.svg" alt="" class="onhover">
+            </a>
+          </div>
+
+          <!-- mob-view -->
+          <div class="mob-social-icon">
+            <a href="https://www.twitter.com/newtechfusion/" target="_blank"><img src="/assets/images/twitter.svg"
+                alt=""></a>
+            <a href="https://www.instagram.com/newtechfusion/" target="_blank"><img src="/assets/images/insta.svg"
+                alt=""></a>
+            <a href="https://www.facebook.com/newtechfusion" target="_blank"><img src="/assets/images/fb.svg"
+                alt=""></a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-sm ">
+    <div class="container">
+      <a class="navbar-brand" href="home" routerLink="/"><img src="../assets/images/Logo.svg" alt=""></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+
+        <div class="menu-trigger" (click)="isOpen = !isOpen">
+          <i class="gg-push-chevron-right-o"></i>
+        </div>
+        <!-- mob-view -->
+        <div class="mob-menu">
+          <div class="side-menu" *ngIf="isOpen" [@sideMenu]>
+            <div class="menu-close" (click)="isOpen = !isOpen">
+              <i class="gg-push-chevron-left-o"></i>
+            </div>
+            <div class="menu-item">
+              <a class="nav-link" aria-current="page" href="#" routerLinkActive="is-active"
+                routerLink="home-page">Home</a>
+            </div>
+            <div class="menu-item">
+              <a class="nav-link" href="#" routerLink="service-page" routerLinkActive="is-active">Services</a>
+            </div>
+            <div class="menu-item">
+              <a class="nav-link" href="#" routerLink="mobile-page" routerLinkActive="is-active">Mobile</a>
+            </div>
+            <div class="menu-item">
+              <a class="nav-link" href="#" routerLink="portfolio-page" routerLinkActive="is-active">Portfolio</a>
+            </div>
+            <div class="menu-item">
+              <a class="nav-link" href="#" routerLink="company-page" routerLinkActive="is-active">Company</a>
+            </div>
+          </div>
+        </div>
+
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- desktop-view -->
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" routerLinkActive="is-active"
+              routerLink="home-page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="service-page" routerLinkActive="is-active">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="mobile-page" routerLinkActive="is-active">Mobile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="portfolio-page" routerLinkActive="is-active">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" routerLink="company-page" routerLinkActive="is-active">Company</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+
+<footer>
+  <div class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2 col-sm-4 col-xs-12">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#" routerLink="home-page" routerLinkActive="home-page">Home</a></li>
+            <li><a href="#" routerLink="service-page" routerLinkActive="service-page">Services</a></li>
+            <li><a href="#" routerLink="mobile-page" routerLinkActive="mobile-page">Mobile</a></li>
+            <li><a href="#" routerLink="portfolio-page" routerLinkActive="portfolio-page">PortFolio</a></li>
+            <li><a href="#" routerLink="company-page" routerLinkActive="company-page" [queryParams]="{tab:0}">About
+                Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-12">
+          <h5>Contact info</h5>
+          <ul class="contact-info-list">
+            <li><img src="" alt="">
+              <p>clever@monks.com</p>
+            </li>
+            <li><img src="" alt="">
+              <p>+91 1234567890</p>
+            </li>
+            <li><img src="" alt="">
+              <p>Office 18/507, Al-Abbas Building,
+                Banks Street Bur Dubai, Dubai
+                UAE P O Box - 128840
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-xs-12">
+          <h5>services</h5>
+          <ul>
+            <li><a href="#" routerLink="/service-page" routerLinkActive="/service-page" [queryParams]="{tab:0}">Custom
+                Development</a></li>
+            <li><a href="#" routerLink="/service-page" routerLinkActive="/service-page" [queryParams]="{tab:1}">Open
+                Source Implimentation</a></li>
+            <li><a href="#" routerLink="/service-page" routerLinkActive="/service-page"
+                [queryParams]="{tab:2}">Maintanance and Support</a></li>
+            <li><a href="#" routerLink="/service-page" routerLinkActive="/service-page" [queryParams]="{tab:3}">Our
+                Expertise</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-4 col-xs-12">
+          <h5>contact us</h5>
+          <div class="email-input">
+            <form [formGroup]="myForm" class="" (ngSubmit)="send()">
+              <label for="">Email Address</label>
+              <input formControlName="email" type="email" id="email" name="email" class="" required
+                placeholder="Enter Email Address">
+              <button type="submit" [disabled]="!myForm.valid" href="#" class="primary-btn submit"
+                type="submit"><span>Submit</span></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copy-right-block">
+    <div class="container">
+      <p>Copyright 2022 NewTechFusion Cybertech Pvt Ltd / All rights reserved.</p>
+    </div>
+  </div>
+</footer>

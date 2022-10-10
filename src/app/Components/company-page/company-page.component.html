@@ -1,0 +1,148 @@
+<div class="company-tabs-section">
+  <div class="container">
+    <mat-tab-group [(selectedIndex)]="tabNumber">
+
+      <mat-tab label="About US">
+        <div class="company-tabs-summry">
+          <div class="company-tabs-summry-block">
+            <div class="row flex">
+              <div class="col-sm-12 col-md-6">
+                <img src="/assets/images/about-us.svg" alt="">
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <h2><span>We Go The Extra Mile </span>For The Client.</h2>
+                <p>NewTechFusion is a diversified global software development and IT outsourcing
+                  company that gives both offshore and onshore technological solutions to business
+                  enterprises around the world. NewTechFusion has proven expertise in
+                  encompassing low cost, but high quality and reliable software solutions and services
+                  in areas like IT consulting, offshore web development and business applications
+                  including ecommerce, e-learning, finance, manufacturing, content management
+                  and many other business systems.
+                </p>
+              </div>
+            </div>
+          </div>
+          <app-contact-form></app-contact-form>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Careers">
+        <div class="company-tabs-summry">
+          <section class="home-contact-form">
+            <div class="container">
+              <h2><span>Contact</span> Us</h2>
+              <div class="home-contact-form-body">
+                <div class="row contact-form-body-flex">
+                  <div class="col-sm-12 col-md-6">
+                    <img src="/assets/images/careers.svg" alt="">
+                  </div>
+                  <div class="col-sm-12 col-md-6 ">
+                    <form [formGroup]="myForm" class="" (ngSubmit)="  send()">
+                      <div class="form-field">
+                        <label for="firstName" class="">First Name</label>
+                        <input formControlName="firstName" type="text" id="firstName" name="firstName" class=""
+                          placeholder="Enter First Name"  />
+                        <div *ngIf="myForm.get('firstName')?.invalid && myForm.controls['firstName'].touched" class="">
+                          <div *ngIf="myForm.get('firstName')?.errors?.['required']">
+                            <p class="error">Name is required.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="lastName" class="">Last Name</label>
+                        <input formControlName="lastName" type="text" id="lastName" name="lastName" class=""
+                          placeholder="Enter Last Name" />
+                        <div *ngIf="myForm.get('lastName')?.invalid && myForm.controls['lastName'].touched" class="">
+                          <div *ngIf="myForm.get('lastName')?.errors?.['required']">
+                            <p class="error">Last Name is required.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="email" class="">Email Address</label>
+                        <input formControlName="email" type="email" id="email" name="email" class="" required
+                          placeholder="Enter Email Address" />
+                        <div *ngIf="myForm.get('email')?.invalid && myForm.controls['email'].touched " class="">
+                          <div *ngIf="myForm.get('email')?.errors?.['required']">
+                            <p class="error">Email is required.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="number" class="">Phone Number</label>
+                        <input formControlName="number" type="number" id="number" name="mumber" class=""
+                          placeholder="Enter Phone Number" />
+                        <div *ngIf="myForm.get('number')?.invalid && myForm.controls['number'].touched " class="">
+                          <div *ngIf="myForm.get('number')?.errors?.['required']">
+                            <p class="error">Number is required.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="apply" class="">I Want To Apply For </label>
+                        <select formControlName="documents">
+                          <option value="" disabled selected class="selected-placeholder">Please Select</option>
+                          <option value="hurr">Durr</option>
+                          <option value="hurr">Durr</option>
+                          <option value="hurr">Durr</option>
+                          <option value="hurr">Durr</option>
+                          <option value="hurr">Durr</option>
+                        </select>
+                        <div *ngIf="myForm.get('apply')?.invalid && myForm.controls['apply'].touched " class="">
+                          <div *ngIf="myForm.get('apply')?.errors?.['required']">
+                            <p class="error">Please select any option.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="Documents" class="">Upload Related Documents</label>
+                        <div class="related-docs">
+                          <input formControlName="documents" id="Documents" name="Documents" class=""
+                            placeholder="Choose File" />
+                          <a href=""></a>
+                        </div>
+                        <div *ngIf="myForm.get('documents')?.invalid && myForm.controls['documents'].touched" class="">
+                          <div *ngIf="myForm.get('documents')?.errors?.['required']">
+                            <p class="error">Documents File is required.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-field">
+                        <label for="message" class="">Enter Captcha</label>
+                        <input formControlName="recaptcha" id="message" name="message" class=""
+                          placeholder="Enter Here" />
+                        <div *ngIf="myForm.get('message')?.invalid && myForm.controls['message'].touched" class="">
+                          <div *ngIf="myForm.get('message')?.errors?.['required']">
+                            <p class="error">Message is required.</p>
+                          </div>
+                        </div>
+                        <!-- <re-captcha id="recaptcha" name="recaptcha" #recaptcha="ngModel"       required
+                          [class.is-invalid]="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"></re-captcha> -->
+                        <!-- <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"
+                          class="invalid-feedback">
+                          <div *ngIf="recaptcha.errors?.['required']">This field is required.</div>
+                        </div> -->
+                      </div>
+                      <!-- <button type="submit" [disabled]="!myForm.valid" class="primary-btn"><span>Submit</span></button> -->
+                      <div class="button-wrapper primary-btn">
+                        <button href="#"  class="button" type="submit" [disabled]="!myForm.valid">Submit</button>
+                        <div class="button-bg"></div>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

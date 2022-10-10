@@ -1,0 +1,87 @@
+<section class="home-contact-form">
+  <div class="container">
+    <h2><span>Contact</span> Us</h2>
+    <div class="home-contact-form-body">
+      <div class="row contact-form-body-flex">
+        <div class="col-sm-12 col-md-6">
+          <img src="/assets/images/home-conatct-img.svg" alt="">
+        </div>
+        <div class="col-sm-12 col-md-6 ">
+          <form [formGroup]="myForm" class="" (ngSubmit)="  send()">
+            <div class="form-field">
+              <label for="firstName" class="">First Name</label>
+              <input formControlName="firstName" type="text" id="firstName" name="firstName" class="" placeholder="Enter First Name" />
+              <div *ngIf="myForm.get('firstName')?.invalid && myForm.controls['firstName'].touched" class="">
+                <div *ngIf="myForm.get('firstName')?.errors?.['required']">
+                  <p class="error">Name is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="lastName" class="">Last Name</label>
+              <input formControlName="lastName" type="text" id="lastName" name="lastName" class="" placeholder="Enter Last Name" />
+              <div *ngIf="myForm.get('lastName')?.invalid && myForm.controls['lastName'].touched" class="">
+                <div *ngIf="myForm.get('lastName')?.errors?.['required']">
+                  <p class="error">Last Name is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="email" class="">Email Address</label>
+              <input formControlName="email" type="email" id="email" name="email" class="" required  placeholder="Enter Email Adress"/>
+              <div *ngIf="myForm.get('email')?.invalid && myForm.controls['email'].touched " class="">
+                <div *ngIf="myForm.get('email')?.errors?.['required']">
+                  <p class="error">Email is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="number" class="">Phone Number</label>
+              <input formControlName="number" type="number" id="number" name="number" class="" placeholder="Enter Phone Number" />
+              <div *ngIf="myForm.get('number')?.invalid && myForm.controls['number'].touched " class="">
+                <div *ngIf="myForm.get('number')?.errors?.['required']">
+                  <p class="error">Number is required.</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="company" class="">Company / Store</label>
+              <input formControlName="company" type="text" id="company" name="company" class="" placeholder="Enter Company / Store"/>
+              <div *ngIf="myForm.get('company')?.invalid && myForm.controls['company'].touched " class="">
+                <div *ngIf="myForm.get('company')?.errors?.['required']">
+                  <p class="error">Company Details is required. </p>
+                </div>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message" class="">Message</label>
+              <textarea formControlName="message" id="message" name="message" class="" placeholder="Type here..."></textarea>
+              <div *ngIf="myForm.get('message')?.invalid && myForm.controls['message'].touched" class="">
+                <div *ngIf="myForm.get('message')?.errors?.['required']">
+                  <p class="error">Message is required.</p>
+                </div>
+              </div>
+            </div>
+            <!-- <button type="submit" [disabled]="!myForm.valid" class="primary-btn"><span>Submit</span></button> -->
+            <div class="button-wrapper primary-btn">
+              <button href="#"  class="button" type="submit" [disabled]="!myForm.valid">View More</button>
+              <div class="button-bg"></div>
+            </div>
+          </form>
+          <div class="service-error" *ngIf="error">
+            <h1>{{error}}</h1>
+            <h3>{{error}}</h3>
+          </div>
+          <div [hidden]="!submitted" class="contact-message">
+            <div *ngIf="model.id" class="contact-success">
+              <h2 class="success">Success!</h2>
+              <h4>Contact form has been successfully submitted.</h4>
+              <br />
+              <button (click)="gotoHome()" class="btn btn-info">Go to Home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

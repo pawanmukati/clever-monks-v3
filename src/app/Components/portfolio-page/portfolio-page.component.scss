@@ -1,0 +1,169 @@
+.portfolio-tabs-section {
+
+    padding: 100px 0 0;
+
+    mat-tab-group {}
+}
+
+::ng-deep mat-tab-header {
+    width: fit-content !important;
+    margin: 0 auto !important;
+    border: none !important;
+
+    .mat-tab-labels {
+        display: flex;
+        height: 100px;
+        align-items: center;
+    }
+
+    .mat-ink-bar {
+        display: none !important;
+    }
+
+    .mat-tab-label-active {
+        background: #F21863 !important;
+        border-radius: 10.95px !important;
+        color: #fff !important;
+    }
+
+    .mat-tab-label {
+        padding: 10px 20px;
+        background: #FFFFFF;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10.95px;
+        margin: 10px;
+        color: #F21863;
+    }
+}
+
+.mat-tab-group {
+    position: relative;
+
+    &::after,
+    &::before {
+        content: "";
+        width: 100%;
+        max-width: 450px;
+        height: 100%;
+        background-size: 450px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+
+    &::after {
+        background-image: url(/assets/images/portfolio-left-bg.svg);
+        left: 0;
+    }
+
+    &::before {
+        background-image: url(/assets/images/portfolio-right-bg.svg);
+        right: 0;
+    }
+}
+
+::ng-deep mat-tab-body {
+    padding: 80px 0 0;
+
+    .mat-tab-body-content {
+        overflow: initial !important;
+    }
+
+    .web-design-and-developmet {
+
+        padding: 0 0 30px;
+
+        .design-frame-body {
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding: 0;
+
+                li {
+
+                    a {
+
+                        img {}
+                    }
+                }
+            }
+        }
+
+        span {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 39px;
+            text-align: center;
+            color: #000072;
+            margin: 0 auto;
+            margin-top: 120px;
+            display: block;
+        }
+    }
+
+    .uiux-design {
+        ul {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        span {
+            margin-top: 50px;
+        }
+    }
+
+}
+
+$breakpoint-ipad-pro: 768px;
+
+@media (max-width: $breakpoint-ipad-pro){
+
+    .web-design-and-developmet {
+        padding: 0 0 30px;
+    }
+
+    .uiux-design ul {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+        justify-content: center;
+        
+    }
+}
+
+$breakpoint-ipad: 768px;
+
+@media (max-width: $breakpoint-ipad) {
+    .computer-frame {
+        ul {
+            justify-content: center;
+
+            li {
+                margin: 20px;
+            }
+        }
+
+        span {
+            margin-top: 20px;
+        }
+    }
+    .mat-tab-group {
+        &::after,
+        &::before {
+            max-width: 360px;
+            background-size: 360px;
+            top: 3%;
+        }
+    }
+    .mat-tab-group::after, .mat-tab-group::before {
+        max-width: 180px;
+        background-size: 180px;
+        top: 6%;
+    }
+}

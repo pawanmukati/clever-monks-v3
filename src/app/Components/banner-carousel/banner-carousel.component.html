@@ -1,0 +1,235 @@
+<!-- (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" -->
+<swiper [config]="config">
+
+  <ng-template swiperSlide>
+    <section class="banner-section bg-right">
+      <div class="container">
+        <div class="row flex">
+          <div class="col-md-6">
+            <div class="banner-content-txt">
+              <h1>We <span>Plan & Build</span><br>
+                Websites, Web Mobile Applications.</h1>
+              <p>Each designed to meet your specific need. Our current catalog of completed solutions includes but are
+                not
+                limited to static websites.</p>
+              <!-- <button href="#" (click)="viewMore()" class="primary-btn"><span>View More</span></button> -->
+              <div class="button-wrapper primary-btn">
+                <button href="#" (click)="viewMore()" class="button" type="button">View More</button>
+                <div class="button-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="banner-img">
+              <img src="/assets/images/banner-slide-first-img.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <section class="banner-section bg-left">
+      <div class="container">
+        <div class="row flex flex-revser">
+          <div class="col-md-6">
+            <div class="banner-img">
+              <img src="/assets/images/banner-slide-second-img.svg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="banner-content-txt">
+              <h1><span>CRM-Service</span>
+                Is The <br> Solution To Stay On Top Of Your Game.</h1>
+              <p>When you have a strong CRM strategy for your business, it allows you to build personal connections with
+                customers, which in turn helps you identify their needs and requirements and provide them with
+                personalized services.</p>
+              <!-- <button href="#" (click)="viewMore()" class="primary-btn"><span>View More</span></button> -->
+              <div class="button-wrapper primary-btn">
+                <button href="#" (click)="viewMore()" class="button" type="button">View More</button>
+                <div class="button-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <section class="banner-section bg-right">
+      <div class="container">
+        <div class="row flex">
+          <div class="col-md-6">
+            <div class="banner-content-txt">
+              <h1>A <span>Design Agency</span>
+                With <br> Professional
+                Creative Team</h1>
+              <p>We are a creative and digital agency, we are providing mobile, UI/UX (User Interface/User Experience),
+                web design and development, internet marketing, android development.</p>
+              <!-- <button href="#" (click)="viewMore()" class="primary-btn"><span>View More</span></button> -->
+              <div class="button-wrapper primary-btn">
+                <button href="#" (click)="viewMore()" class="button" type="button">View More</button>
+                <div class="button-bg"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="banner-img">
+              <img src="/assets/images/banner-slide-third-img.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+
+  <ng-template swiperSlide>
+    <section class="banner-section bg-left">
+      <div class="container">
+        <div class="row flex flex-revser">
+          <div class="col-sm-12 col-md-6">
+            <div class="banner-img">
+              <img src="/assets/images/banner-slide-fourth-img.svg" alt="">
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="banner-content-txt">
+              <h1><span>NFT Block Chain</span>
+                Can Represent Real
+                World Like Artwork</h1>
+              <p>Each designed to meet your specific need. Our current catalog of completed solutions includes but are
+                not
+                limited to static websites.</p>
+              <!-- <button href="#" (click)="viewMore()" class="primary-btn"><span>View More</span></button> -->
+              <div class="button-wrapper primary-btn">
+                <button href="#" (click)="viewMore()" class="button" type="button">View More</button>
+                <div class="button-bg"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+</swiper>
+
+
+<!--
+<div id="pinContainer">
+	<div id="slideContainer">
+      <section class="banner-section panel">
+        <div class="container">
+          <div class="row flex">
+            <div class="col-md-6">
+              <div class="banner-content-txt">
+                <h1>We <span>Plan & Build</span>
+                  Websites, Web Mobile Applications.</h1>
+                <p>Each designed to meet your specific need. Our current catalog of completed solutions includes but are
+                  not
+                  limited to static websites.</p>
+                <a href="#" class="primary-btn"><span>Learn More</span></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="banner-img">
+                <img src="/assets/images/banner-slide-first-img.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner-section panel">
+        <div class="container">
+          <div class="row flex flex-revser">
+            <div class="col-md-6">
+              <div class="banner-img">
+                <img src="/assets/images/banner-slide-second-img.svg" alt="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="banner-content-txt">
+                <h1><span>CRM-Service</span>
+                  Is The Solution To Stay On Top Of Your Game.</h1>
+                <p>When you have a strong CRM strategy for your business, it allows you to build personal connections with
+                  customers, which in turn helps you identify their needs and requirements and provide them with
+                  personalized services.</p>
+                <a href="#" class="primary-btn"><span>Learn More</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+		<section class="banner-section panel">
+      <div class="container">
+        <div class="row flex">
+          <div class="col-md-6">
+            <div class="banner-content-txt">
+              <h1>A <span>Design Agency</span>
+                With Professional
+                Creative Team</h1>
+              <p>We are a creative and digital agency, we are providing mobile, UI/UX (User Interface/User Experience),
+                web design and development, internet marketing, android development.</p>
+              <a href="#" class="primary-btn"><span>Learn More</span></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="banner-img">
+              <img src="/assets/images/banner-slide-third-img.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+		<section class="banner-section panel">
+      <div class="container">
+        <div class="row flex flex-revser">
+          <div class="col-sm-12 col-md-6">
+            <div class="banner-img">
+              <img src="/assets/images/banner-slide-fourth-img.svg" alt="">
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="banner-content-txt">
+              <h1><span>NFT Block Chain</span>
+                Can Represent Real
+                World Like Artwork</h1>
+              <p>Each designed to meet your specific need. Our current catalog of completed solutions includes but are
+                not
+                limited to static websites.</p>
+              <a href="#" class="primary-btn"><span>Learn More</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	</div>
+</div> -->
+
+
+<!-- mob-view -->
+<div class="mob-banner">
+  <section class="banner-section">
+    <div class="container">
+      <div class="row flex">
+        <div class="col-md-6">
+          <div class="banner-content-txt">
+            <h1>We <span>Plan & Build</span>
+              Websites, Web Mobile Applications.</h1>
+            <p>Each designed to meet your specific need. Our current catalog of completed solutions includes but are
+              not
+              limited to static websites.</p>
+            <a href="#" class="primary-btn"><span>Learn More</span></a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="banner-img">
+            <img src="/assets/images/banner-slide-first-img.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
